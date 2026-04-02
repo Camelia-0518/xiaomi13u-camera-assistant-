@@ -4,35 +4,39 @@ name: Build APK
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
-  build:
+  build-android:
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v3
     
-    - name: Set up JDK 17
+    - name: Setup Java
       uses: actions/setup-java@v3
       with:
-        java-version: '17'
         distribution: 'temurin'
+        java-version: '17'
     
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
     
-    - name: Grant execute permission for gradlew
-      run: chmod +x android-auto-camera/gradlew
-      working-directory: ./android-auto-camera
+    - name: Cache Gradle packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+        restore-keys: ${{ runner.os }}-gradle
     
-    - name: Build with Gradle
-      run: ./gradlew assembleDebug
+    - name: Build APK with Gradle
       working-directory: ./android-auto-camera
+      run: |
+        chmod +x gradlew
+        ./gradlew assembleDebug
     
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
-        name: xiaomi13u-camera-assistant
+        name: xiaomi13u-camera-assistant-apk
         path: android-auto-camera/app/build/outputs/apk/debug/app-debug.apk
