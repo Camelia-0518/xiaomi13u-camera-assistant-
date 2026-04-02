@@ -1,0 +1,13 @@
+{
+  "name": "xiaomi13u-camera-assistant",
+  "version": "1.0.0",
+  "description": "小米13 Ultra 摄影助手",
+  "main": "index.html",
+  "scripts": {
+    "build": "cordova build android",
+    "run": "cordova run android"
+  },
+  "author": "Kimi Claw",
+  "license": "MIT",
+  "dependencies": {}
+}

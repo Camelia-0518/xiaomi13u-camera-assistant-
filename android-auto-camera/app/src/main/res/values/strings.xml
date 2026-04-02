@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">小米13U摄影助手</string>
+    <string name="accessibility_service_description">检测相机应用启动，自动显示拍摄参数指导</string>
+    <string name="service_enabled">服务已启用</string>
+    <string name="service_disabled">服务未启用</string>
+</resources>

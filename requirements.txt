@@ -1,0 +1,14 @@
+# 小米13 Ultra AI摄影助手依赖
+
+# 核心（必需）
+# 无额外依赖，仅Python标准库
+
+# Web界面（可选）
+streamlit>=1.28.0
+
+# 移动端（可选，用于构建APK）
+kivy==2.2.1
+pygments
+
+# 开发工具（可选）
+# buildozer  # 用于构建Android APK

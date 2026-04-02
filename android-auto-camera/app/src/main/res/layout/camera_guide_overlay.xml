@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 相机指导悬浮窗布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:padding="12dp"
+    android:elevation="8dp">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📷 小米13U 拍摄指导"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"/>
+
+        <Button
+            android:id="@+id/btn_minimize"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="−"
+            android:textSize="20sp"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="×"
+            android:textSize="20sp"
+            android:background="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+    <!-- 场景按钮网格 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:paddingTop="12dp">
+
+        <Button
+            android:id="@+id/btn_portrait"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:text="👤\n人像"
+            android:textSize="12sp"
+            android:backgroundTint="#E3F2FD"/>
+
+        <Button
+            android:id="@+id/btn_night"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:text="🌃\n夜景"
+            android:textSize="12sp"
+            android:backgroundTint="#E8EAF6"/>
+
+        <Button
+            android:id="@+id/btn_street"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:text="📸\n街拍"
+            android:textSize="12sp"
+            android:backgroundTint="#FFF3E0"/>
+
+        <Button
+            android:id="@+id/btn_landscape"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:text="🏔️\n风景"
+            android:textSize="12sp"
+            android:backgroundTint="#E8F5E9"/>
+
+        <Button
+            android:id="@+id/btn_food"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:text="🍜\n美食"
+            android:textSize="12sp"
+            android:backgroundTint="#FCE4EC"/>
+
+        <Button
+            android:id="@+id/btn_star"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_columnWeight="1"
+            android:text="⭐\n星空"
+            android:textSize="12sp"
+            android:backgroundTint="#311B92"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btn_quick_tips"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_columnSpan="3"
+            android:layout_columnWeight="1"
+            android:text="⚡ 快速提示 (街拍/光圈/夜景/人像/徕卡色)"
+            android:textSize="12sp"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"/>
+    </GridLayout>
+
+    <!-- 街拍快捷键提示 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="💡 街拍快捷键: 锁屏双击音量下键"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.kimiclaw.cameraassistant"
+        version="1.0.0"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    
+    <name>小米13U摄影助手</name>
+    <description>小米13 Ultra专业摄影参数指导</description>
+    <author email="support@kimiclaw.com" href="https://kimiclaw.com">Kimi Claw</author>
+    
+    <content src="index.html" />
+    <access origin="*" />
+    
+    <!-- 权限 -->
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="21" />
+    <preference name="android-installLocation" value="auto" />
+    
+    <!-- 允许文件访问 -->
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon src="res/icon/android/icon-36-ldpi.png" density="ldpi" />
+        <icon src="res/icon/android/icon-48-mdpi.png" density="mdpi" />
+        <icon src="res/icon/android/icon-72-hdpi.png" density="hdpi" />
+        <icon src="res/icon/android/icon-96-xhdpi.png" density="xhdpi" />
+    </platform>
+    
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    
+</widget>
